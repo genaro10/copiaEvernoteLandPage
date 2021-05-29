@@ -1,15 +1,16 @@
 import { AppBar, makeStyles,Toolbar } from '@material-ui/core'
 import React from 'react'
+import { Navbar, Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
 
 const styles = makeStyles({
     AppBar:{
-        backgroundColor:"white",
-        height:"65px",
+        height:"85px",
         width:"100%"
     },
     imagen : {
-        height:"65px",
-        marginLeft:"60px"
+        height:"85px",
+        marginLeft:"60px",
+        marginTop:"24px"
     },
     padreImagen:{
         display:"flex"
@@ -28,13 +29,32 @@ const styles = makeStyles({
     },
     text:{
         color:"black",
-        fontSize:"13px",
-        margin:"9px"
+        fontSize:"16px",
+        marginBottom:"9px",
+        fontWeight:"bold",
+        "&:hover": {
+            backgroundColor:"green",
+            color:"white",
+            borderRadius:60
+          }
+    },
+    textDrop:{
+        color:"black",
+        fontSize:"16px",
+        marginBottom:"15px",
+        fontWeight:"bold",
     },
     textDescargar:{
         color:"green",
         fontSize:"13px",
         margin:"9px"
+    },
+    boton:{
+        marginBottom:'10px'
+    },
+    form:{
+        display:"flex",
+        marginBottom:"8px"
     }
 })
 
@@ -42,23 +62,28 @@ export default function NavBar() {
     const estilos = styles()
     return (
         <>
-            <AppBar className={estilos.AppBar} position='static'>
-                <Toolbar>
-                    <div className={estilos.padreImagen}>
-                        <img alt="Logo" className={estilos.imagen} src="https://www.creativosonline.org/wp-content/uploads/2018/08/evernote.jpg"></img>
-                    </div>
-                    <div className={estilos.padreLista}>
-                        <h2 className={estilos.text}>POR QUE EVERNOTE?</h2>
-                        <h2 className={estilos.text}>FUNCIONES</h2>
-                        <h2 className={estilos.text}>PLANES</h2>
-                    </div>
-                    <div className={estilos.padrefinal}>
-                        <h2 className={estilos.text}>AYUDA</h2>
-                        <h2 className={estilos.text}>INICIAR SESION</h2>
-                        <h2 className={estilos.textDescargar}>DESCARGAR</h2>
-                    </div>
-                </Toolbar>
-            </AppBar>
+            <Navbar bg="white" expand="lg" className={estilos.AppBar}>
+                <Navbar.Brand href="#home" className={estilos.imagen}><img src={"https://evernote.com/img/logo/evernote/primary.svg"}/></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                    <Nav.Link href="#home" className={estilos.text}>POR QUE EVERNOTE</Nav.Link>
+                    <Nav.Link href="#link" className={estilos.text}>FUNCIONES</Nav.Link>
+                    <NavDropdown title='PLANES' id="basic-nav-dropdown" className={estilos.text}>
+                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                    </NavDropdown>
+                    </Nav>
+                    <Form className={estilos.form}>
+                        <Nav.Link href="#home" className={estilos.text}>AYUDA</Nav.Link>
+                        <Nav.Link href="#home" className={estilos.text}>INICIAR SESION</Nav.Link>
+                        <Button variant="outline-success" className={estilos.boton}>DESCARGAR</Button>
+                    </Form>
+                </Navbar.Collapse>
+            </Navbar>
         </>
     )
 }

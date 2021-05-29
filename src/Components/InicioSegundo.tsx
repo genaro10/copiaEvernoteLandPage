@@ -8,15 +8,17 @@ const styles = makeStyles({
         width:"100%",
         marginTop:"20px",
         justifyContent:"flex-start",
-        marginLeft:"50px"
     },
     dos:{
-        width:"85%",
-        marginTop:"30px"
+        width:"100%",
+        marginTop:"30px",
+        textAlign:"start",
+        marginLeft:"10px"
     },
     titleText:{
         fontSize:"18px",
-        height:"5px"
+        height:"22px",
+        marginTop:"20px"
     },
     subtitleText:{
         fontSize:"14px",
@@ -29,7 +31,7 @@ function InicioSegundo() {
     return (
         <Grid container className={estilos.body} spacing={5}>
             <Grid item xs={12} sm={6} md={6} xl={12}>
-                <img src={img} style={{width:"90%"}}></img>
+                <img src={img} style={{width:"90%",marginLeft:"50px"}}></img>
             </Grid>
             <Grid item xs={12} sm={6} md={6} xl={12}>
                 <div className={estilos.dos}>

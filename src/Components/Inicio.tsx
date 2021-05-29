@@ -7,7 +7,7 @@ const styles = makeStyles({
         flexDirection:"column",
         alignItems:"center",
         marginTop:"30px",
-        textAlign:"center"
+        textAlign:"center",
     },
     botonRegistro:{
         backgroundColor:"green",
@@ -24,8 +24,8 @@ function Inicio() {
     const estilos = styles()
     return (
         <div className={estilos.body}>
-            <h1 style={{height:"25px",fontSize:"3vmax"}}>Consigue más con mejores notas</h1>
-            <h4 style={{height:"25px",fontSize:"16px"}}>Evernote te ayuda a capturar ideas y a encontrarlas rápidamente.</h4>
+            <h1 style={{height:"50px",fontSize:"3vmax"}}>Consigue más con mejores notas</h1>
+            <h4 style={{height:"50px",fontSize:"16px"}}>Evernote te ayuda a capturar ideas y a encontrarlas rápidamente.</h4>
             <Button className={estilos.botonRegistro}>Registrate gratis</Button>
             <Button className={estilos.botonIniciarSesion}>¿Ya tienes una cuenta? Inicia sesión</Button>
         </div>
