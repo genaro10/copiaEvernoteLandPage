@@ -7,6 +7,10 @@ import InicioSegundo from './Components/InicioSegundo';
 import Empresas from './Components/Empresas';
 import IntegracionAplicaciones from './Components/IntegracionAplicaciones';
 import EscaneoDocumentos from './Components/EscaneoDocumentos';
+import WebClipper from './Components/WebClipper';
+import NotasEnriquecidas from './Components/NotasEnriquecidas';
+import Pricing from './Components/Pricing';
+import Last from './Components/Last';
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
       <Empresas/>
       <IntegracionAplicaciones/>
       <EscaneoDocumentos/>
+      <WebClipper/>
+      <NotasEnriquecidas/>
+      <Pricing/>
+      <Last/>
     </div>
   );
 }
