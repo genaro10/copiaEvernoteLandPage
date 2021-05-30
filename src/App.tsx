@@ -11,6 +11,7 @@ import WebClipper from './Components/WebClipper';
 import NotasEnriquecidas from './Components/NotasEnriquecidas';
 import Pricing from './Components/Pricing';
 import Last from './Components/Last';
+import Enlaces from './Components/Enlaces';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <NotasEnriquecidas/>
       <Pricing/>
       <Last/>
+      <Enlaces/>
     </div>
   );
 }
