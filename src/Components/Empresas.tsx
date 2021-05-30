@@ -6,6 +6,7 @@ import forbes from '../Imagenes/forbes.png'
 import inc from '../Imagenes/inc.png'
 import verge from '../Imagenes/verge.png'
 import well from '../Imagenes/well.png'
+import Carousel from 'react-bootstrap/Carousel'
 
 const styles = makeStyles({
     body:{
@@ -40,18 +41,62 @@ function Empresas() {
     const estilos = styles()
     return (
         <div className={estilos.body}>
-            <div className={estilos.completo}>
-                <p className={estilos.parrafo} style={{marginTop:"100px"}}>"Piensa en Evernote como tu centro de referencia, no solo para tus listas de tareas pendientes, sino para todas tus notas. Las posibilidades de organización que ofrece son amplias y todo se sincroniza en todos los dispositivos en los que la aplicación esté habilitada, por lo que siempre estarás al día."</p>
-                <p className={estilos.parrafo}>-Inc Magazine</p>
-            </div>
-            <div className={estilos.logoEmpresas}>
-                <img className={estilos.imagen} src={business}></img>
-                <img className={estilos.imagen} src={entrepeneur}></img>
-                <img className={estilos.imagen} src={verge}></img>
-                <img className={estilos.imagen} src={well}></img>
-                <img className={estilos.imagen} src={inc}></img>
-                <img className={estilos.imagen} src={forbes}></img>
-            </div>
+            <Carousel>
+            <Carousel.Item>
+                    <div className={estilos.completo}>
+                        <p className={estilos.parrafo} style={{marginTop:"100px"}}>"Piensa en Evernote como tu centro de referencia, no solo para tus listas de tareas pendientes, sino para todas tus notas. Las posibilidades de organización que ofrece son amplias y todo se sincroniza en todos los dispositivos en los que la aplicación esté habilitada, por lo que siempre estarás al día."</p>
+                        <p className={estilos.parrafo}>-Inc Magazine</p>
+                    </div>
+                    <div className={estilos.logoEmpresas}>
+                        <img className={estilos.imagen} src={business}></img>
+                    </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <div className={estilos.completo}>
+                        <p className={estilos.parrafo} style={{marginTop:"100px"}}>"Piensa en Evernote como tu centro de referencia, no solo para tus listas de tareas pendientes, sino para todas tus notas. Las posibilidades de organización que ofrece son amplias y todo se sincroniza en todos los dispositivos en los que la aplicación esté habilitada, por lo que siempre estarás al día."</p>
+                        <p className={estilos.parrafo}>-Inc Magazine</p>
+                    </div>
+                    <div className={estilos.logoEmpresas}>
+                        <img className={estilos.imagen} src={entrepeneur}></img>
+                    </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <div className={estilos.completo}>
+                        <p className={estilos.parrafo} style={{marginTop:"100px"}}>"Piensa en Evernote como tu centro de referencia, no solo para tus listas de tareas pendientes, sino para todas tus notas. Las posibilidades de organización que ofrece son amplias y todo se sincroniza en todos los dispositivos en los que la aplicación esté habilitada, por lo que siempre estarás al día."</p>
+                        <p className={estilos.parrafo}>-Inc Magazine</p>
+                    </div>
+                    <div className={estilos.logoEmpresas}>
+                        <img className={estilos.imagen} src={verge}></img>
+                    </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <div className={estilos.completo}>
+                        <p className={estilos.parrafo} style={{marginTop:"100px"}}>"Piensa en Evernote como tu centro de referencia, no solo para tus listas de tareas pendientes, sino para todas tus notas. Las posibilidades de organización que ofrece son amplias y todo se sincroniza en todos los dispositivos en los que la aplicación esté habilitada, por lo que siempre estarás al día."</p>
+                        <p className={estilos.parrafo}>-Inc Magazine</p>
+                    </div>
+                    <div className={estilos.logoEmpresas}>
+                        <img className={estilos.imagen} src={inc}></img>
+                    </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <div className={estilos.completo}>
+                        <p className={estilos.parrafo} style={{marginTop:"100px"}}>"Piensa en Evernote como tu centro de referencia, no solo para tus listas de tareas pendientes, sino para todas tus notas. Las posibilidades de organización que ofrece son amplias y todo se sincroniza en todos los dispositivos en los que la aplicación esté habilitada, por lo que siempre estarás al día."</p>
+                        <p className={estilos.parrafo}>-Inc Magazine</p>
+                    </div>
+                    <div className={estilos.logoEmpresas}>
+                        <img className={estilos.imagen} src={well}></img>
+                    </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <div className={estilos.completo}>
+                        <p className={estilos.parrafo} style={{marginTop:"100px"}}>"Piensa en Evernote como tu centro de referencia, no solo para tus listas de tareas pendientes, sino para todas tus notas. Las posibilidades de organización que ofrece son amplias y todo se sincroniza en todos los dispositivos en los que la aplicación esté habilitada, por lo que siempre estarás al día."</p>
+                        <p className={estilos.parrafo}>-Inc Magazine</p>
+                    </div>
+                    <div className={estilos.logoEmpresas}>
+                        <img className={estilos.imagen} src={forbes}></img>
+                    </div>
+                </Carousel.Item>
+            </Carousel>
         </div>
     )
 }
